@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage, setLocale, getLocale } from 'umi/locale';
 import { Spin, Tag, Menu, Icon, Dropdown, Avatar, Tooltip, Button } from 'antd';
+import { HeaderSearch, NoticeIcon } from 'ant-design-pro';
 import moment from 'moment';
 import groupBy from 'lodash/groupBy';
-import NoticeIcon from '../NoticeIcon';
-import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
 
 export default class GlobalHeaderRight extends PureComponent {

@@ -20,10 +20,8 @@ import {
   DatePicker,
   Select,
 } from 'antd';
-
+import { Result } from 'ant-design-pro';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-import Result from '@/components/Result';
-
 import styles from './BasicList.less';
 
 const FormItem = Form.Item;

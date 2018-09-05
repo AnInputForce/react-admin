@@ -1,8 +1,10 @@
 import React from 'react';
-import { yuan } from '@/components/Charts';
+import { Charts } from 'ant-design-pro';
 /**
  * 减少使用 dangerouslySetInnerHTML
  */
+
+const { yuan } = Charts;
 export default class Yuan extends React.PureComponent {
   componentDidMount() {
     this.rendertoHtml();

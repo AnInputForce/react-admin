@@ -1,6 +1,9 @@
-import RenderAuthorized from '@/components/Authorized';
+import { Authorized as RenderAuthorized } from 'ant-design-pro';
+
 import { getAuthority } from './authority';
 
+
+// const { RenderAuthorized } = AntAuthorized;
 let Authorized = RenderAuthorized(getAuthority()); // eslint-disable-line
 
 // Reload the rights component

@@ -4,11 +4,13 @@ import { connect } from 'dva';
 import Link from 'umi/link';
 import { Row, Col, Card, List, Avatar } from 'antd';
 
-import { Radar } from '@/components/Charts';
+import { Charts } from 'ant-design-pro';
 import EditableLinkGroup from '@/components/EditableLinkGroup';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 
 import styles from './Workplace.less';
+
+const { Radar } = Charts;
 
 const links = [
   {

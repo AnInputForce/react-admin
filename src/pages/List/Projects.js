@@ -2,10 +2,7 @@ import React, { PureComponent } from 'react';
 import moment from 'moment';
 import { connect } from 'dva';
 import { Row, Col, Form, Card, Select, List } from 'antd';
-
-import TagSelect from '@/components/TagSelect';
-import AvatarList from '@/components/AvatarList';
-import Ellipsis from '@/components/Ellipsis';
+import { AvatarList, Ellipsis, TagSelect } from 'ant-design-pro';
 import StandardFormRow from '@/components/StandardFormRow';
 
 import styles from './Projects.less';

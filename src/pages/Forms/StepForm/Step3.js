@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'dva';
 import { Button, Row, Col } from 'antd';
+import { Result } from 'ant-design-pro';
 import router from 'umi/router';
-import Result from '@/components/Result';
 import styles from './style.less';
 
 export default

@@ -14,18 +14,7 @@ import {
   Menu,
   Dropdown,
 } from 'antd';
-import {
-  ChartCard,
-  MiniArea,
-  MiniBar,
-  MiniProgress,
-  Field,
-  Bar,
-  Pie,
-  TimelineChart,
-} from '@/components/Charts';
-import Trend from '@/components/Trend';
-import NumberInfo from '@/components/NumberInfo';
+import { Charts, NumberInfo, Trend } from 'ant-design-pro';
 import numeral from 'numeral';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import Yuan from '@/utils/Yuan';
@@ -35,6 +24,16 @@ import styles from './Analysis.less';
 
 const { TabPane } = Tabs;
 const { RangePicker } = DatePicker;
+const {
+  ChartCard,
+  MiniArea,
+  MiniBar,
+  MiniProgress,
+  Field,
+  Bar,
+  Pie,
+  TimelineChart,
+} = Charts;
 
 const rankingListData = [];
 for (let i = 0; i < 7; i += 1) {

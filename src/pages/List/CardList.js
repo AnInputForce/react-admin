@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Card, Button, Icon, List } from 'antd';
-
-import Ellipsis from '@/components/Ellipsis';
+import { Ellipsis } from 'ant-design-pro';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 
 import styles from './CardList.less';

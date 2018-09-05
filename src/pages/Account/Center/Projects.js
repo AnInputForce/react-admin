@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { List, Card } from 'antd';
+import { AvatarList } from 'ant-design-pro';
 import moment from 'moment';
 import { connect } from 'dva';
-import AvatarList from '@/components/AvatarList';
 import stylesProjects from '../../List/Projects.less';
 
 export default

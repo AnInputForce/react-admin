@@ -88,9 +88,18 @@ export default {
       },
     ],
   },
-
   chainWebpack: webpackplugin,
   cssnano: {
     mergeRules: false,
   },
+  extraBabelPlugins: [
+    [
+      require.resolve('babel-plugin-import'), {
+        libraryName: 'ant-design-pro',
+        libraryDirectory: 'lib',
+        style: true,
+        camel2DashComponentName: false,
+      }
+    ]
+  ]
 };

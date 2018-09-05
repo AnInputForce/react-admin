@@ -1,6 +1,5 @@
 import React from 'react';
-import RenderAuthorized from '@/components/Authorized';
-import Exception from '@/components/Exception';
+import { Authorized as RenderAuthorized, Exception } from 'ant-design-pro';
 import { matchRoutes } from 'react-router-config';
 import uniq from 'lodash/uniq';
 import { formatMessage } from 'umi/locale';
