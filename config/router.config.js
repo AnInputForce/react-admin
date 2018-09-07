@@ -31,7 +31,7 @@ export default [
       {
         name: 'exception',
         path: '/exception',
-        hideChildrenInMenu: true,
+        hideInMenu: true,
         routes: [
           // exception
           {
