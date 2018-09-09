@@ -1,6 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { parse, stringify } from 'qs';
+import { Modal, Icon } from 'antd';
 
 export function fixedZero(val) {
   return val * 1 < 10 ? `0${val}` : val;
@@ -206,4 +207,113 @@ export function formatWan(val) {
     );
   }
   return result;
+}
+
+// add by liaowei at 20180907
+
+export function isCallSucc(response) {
+  if (response == null) {
+    return false;
+  }
+  return true;
+}
+
+export function isRespSucc(response) {
+  if (response == null || response.code !== 'OK') {
+    return false;
+  }
+  return true;
+}
+
+export function getError(response) {
+  return `${response.code}#${response.message}`;
+}
+
+export function showErrorMsg(response) {
+  if (response == null) {
+    return;
+  }
+  Modal.error({
+    title: <div>错误提示</div>,
+    content: (
+      <div style={{ marginTop: 16 }}>
+        错误码：<span style={{ color: '#f5222d' }}>{response.code}</span>
+        <br />
+        错误信息：<span style={{ color: '#f5222d' }}>{response.message}</span>
+      </div>
+    ),
+  });
+}
+
+export function getPropsValue(props, params, defaultValue = undefined) {
+  let propsValue = props;
+  params.every(param => {
+    if (propsValue[param] == null) {
+      propsValue = defaultValue;
+      return false;
+    }
+    propsValue = propsValue[param];
+    return true;
+  });
+  return propsValue;
+}
+
+export function thousandBitSeparator(num) {
+  return parseFloat(num).toLocaleString('zh-cn');
+}
+
+export function createErrExtra(response) {
+  let extraResponse = response;
+  if (extraResponse == null) {
+    extraResponse = {};
+    extraResponse.code = 'EEEEEEE';
+    extraResponse.message = '获取错误信息失败！';
+  }
+  const extra = (
+    <div>
+      <div
+        style={{ fontSize: 16, color: 'rgba(0, 0, 0, 0.85)', fontWeight: '500', marginBottom: 16 }}
+      >
+        您提交的内容发生错误：
+      </div>
+      <div style={{ marginBottom: 16 }}>
+        <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />
+        错误码：
+        <span style={{ color: '#f5222d' }}>{extraResponse.code}</span>
+      </div>
+      <div>
+        <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />
+        错误信息：<span style={{ color: '#f5222d' }}>{extraResponse.message}</span>
+      </div>
+    </div>
+  );
+  return extra;
+}
+
+export function guid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    // eslint-disable-next-line
+    const r = (Math.random() * 16) | 0;
+    // eslint-disable-next-line
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+export function createRouteid() {
+  return guid();
+}
+
+export function createMomentObject(datetime, format) {
+  if (datetime == null) {
+    return undefined;
+  }
+  return moment(datetime, format);
+}
+
+export function isEmptyObject(object) {
+  if (Object.keys(object).length === 0) {
+    return true;
+  }
+  return false;
 }
