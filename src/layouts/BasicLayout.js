@@ -11,7 +11,7 @@ import { enquireScreen, unenquireScreen } from 'enquire-js';
 import { formatMessage } from 'umi/locale';
 import SiderMenu from '@/components/SiderMenu';
 import Authorized from '@/utils/Authorized';
-import SettingDrawer from '@/components/SettingDrawer';
+// import SettingDrawer from '@/components/SettingDrawer';
 import logo from '../assets/logo.svg';
 import Footer from './Footer';
 import Header from './Header';
@@ -80,6 +80,7 @@ class BasicLayout extends React.PureComponent {
   }
 
   state = {
+    // eslint-disable-next-line
     rendering: true,
     isMobile: false,
   };
@@ -94,6 +95,7 @@ class BasicLayout extends React.PureComponent {
     });
     this.renderRef = requestAnimationFrame(() => {
       this.setState({
+        // eslint-disable-next-line
         rendering: false,
       });
     });
@@ -222,6 +224,7 @@ class BasicLayout extends React.PureComponent {
       children,
       location: { pathname },
     } = this.props;
+    // eslint-disable-next-line
     const { rendering, isMobile } = this.state;
     const isTop = PropsLayout === 'topmenu';
     const menuData = this.getMenuData();
@@ -267,9 +270,15 @@ class BasicLayout extends React.PureComponent {
             )}
           </ContainerQuery>
         </DocumentTitle>
-        {rendering && process.env.NODE_ENV === 'production' ? null : ( // Do show SettingDrawer in production
-          <SettingDrawer />
-        )}
+        
+        {
+          /*
+          rendering && process.env.NODE_ENV === 'production' ? null : ( 
+            // Do show SettingDrawer in production
+            <SettingDrawer />
+          )
+          */
+        }
       </React.Fragment>
     );
   }
