@@ -207,7 +207,3 @@ export function formatWan(val) {
   }
   return result;
 }
-
-export function isAntdPro() {
-  return window.location.hostname === 'preview.pro.ant.design';
-}

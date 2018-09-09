@@ -2,7 +2,6 @@ import fetch from 'dva/fetch';
 import { notification } from 'antd';
 import router from 'umi/router';
 import hash from 'hash.js';
-import { isAntdPro } from './utils';
 
 const codeMessage = {
   200: '服务器成功返回请求的数据。',
@@ -66,7 +65,7 @@ const cachedSave = (response, hashcode) => {
 export default function request(
   url,
   options = {
-    expirys: isAntdPro(),
+    expirys: false,
   }
 ) {
   /**
@@ -106,7 +105,7 @@ export default function request(
 
   const expirys = options.expirys || 60;
   // options.expirys !== false, return the cache,
-  if (options.expirys !== false) {
+  if (options.expirys != null && options.expirys !== false) {
     const cached = sessionStorage.getItem(hashcode);
     const whenCached = sessionStorage.getItem(`${hashcode}:timestamp`);
     if (cached !== null && whenCached !== null) {
