@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'dva';
 import { FormattedMessage, setLocale, getLocale } from 'umi/locale';
-import { Spin, Tag, Menu, Icon, Dropdown, Avatar, Tooltip, Button } from 'antd';
+import { Spin, Tag, Menu, Icon, Dropdown, Avatar, Tooltip } from 'antd';
 import { HeaderSearch, NoticeIcon } from 'ant-design-pro';
 import moment from 'moment';
 import groupBy from 'lodash/groupBy';
 import styles from './index.less';
 
-export default class GlobalHeaderRight extends PureComponent {
+class GlobalHeaderRight extends PureComponent {
   getNoticeData() {
     const { notices = [] } = this.props;
     if (notices.length === 0) {
@@ -55,6 +56,7 @@ export default class GlobalHeaderRight extends PureComponent {
       onMenuClick,
       onNoticeClear,
       theme,
+      logoutLoading,
     } = this.props;
     const menu = (
       <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
@@ -66,10 +68,14 @@ export default class GlobalHeaderRight extends PureComponent {
           <Icon type="setting" />
           <FormattedMessage id="menu.account.settings" defaultMessage="account settings" />
         </Menu.Item>
-        <Menu.Item key="triggerError">
-          <Icon type="close-circle" />
-          <FormattedMessage id="menu.account.trigger" defaultMessage="Trigger Error" />
-        </Menu.Item>
+        {
+          /*
+            <Menu.Item key="triggerError">
+              <Icon type="close-circle" />
+              <FormattedMessage id="menu.account.trigger" defaultMessage="Trigger Error" />
+            </Menu.Item>
+          */
+        }
         <Menu.Divider />
         <Menu.Item key="logout">
           <Icon type="logout" />
@@ -136,7 +142,7 @@ export default class GlobalHeaderRight extends PureComponent {
             emptyImage="https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg"
           />
         </NoticeIcon>
-        {currentUser.name ? (
+        {logoutLoading !== true && currentUser.name ? (
           <Dropdown overlay={menu}>
             <span className={`${styles.action} ${styles.account}`}>
               <Avatar
@@ -151,19 +157,31 @@ export default class GlobalHeaderRight extends PureComponent {
         ) : (
           <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
         )}
-        <Button
-          size="small"
-          ghost={theme === 'dark'}
-          style={{
-            margin: '0 8px',
-          }}
-          onClick={() => {
-            this.changLang();
-          }}
-        >
-          <FormattedMessage id="navbar.lang" />
-        </Button>
+        {
+          /*
+          <Button
+            size="small"
+            ghost={theme === 'dark'}
+            style={{
+              margin: '0 8px',
+            }}
+            onClick={() => {
+              this.changLang();
+            }}
+          >
+            <FormattedMessage id="navbar.lang" />
+          </Button>
+          */
+        }
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    logoutLoading: state.loading.effects['login/logout'],
+  };
+}
+
+export default connect(mapStateToProps)(GlobalHeaderRight);
