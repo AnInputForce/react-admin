@@ -4,6 +4,8 @@ import pageRoutes from './router.config';
 import webpackplugin from './plugin.config';
 import defaultSettings from '../src/defaultSettings';
 
+const path = require('path');
+
 export default {
   // add for transfer to umi
   plugins: [
@@ -101,5 +103,8 @@ export default {
         camel2DashComponentName: false,
       }
     ]
-  ]
+  ],
+  alias: {
+    'react-admin-components': path.resolve(__dirname, '../src/components/_Customize'),
+  },
 };

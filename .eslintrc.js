@@ -23,6 +23,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'linebreak-style': 0,
     'no-else-return': 0,
+    'import/no-unresolved': 0,
   },
   settings: {
     polyfills: ['fetch', 'promises', 'url'],
