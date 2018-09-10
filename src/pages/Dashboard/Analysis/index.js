@@ -20,7 +20,7 @@ import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import Yuan from '@/utils/Yuan';
 import { getTimeDistance } from '@/utils/utils';
 
-import styles from './Analysis.less';
+import styles from './index.less';
 
 const { TabPane } = Tabs;
 const { RangePicker } = DatePicker;
