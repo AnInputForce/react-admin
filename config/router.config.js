@@ -30,7 +30,27 @@ export default [
             path: '/dashboard/workplace',
             name: 'workplace',
             component: './Dashboard/Workplace',
-          }
+          },
+        ],
+      },
+      {
+        path: '/form',
+        name: 'form',
+        icon: 'form',
+        authority: ['admin'],
+        routes: [
+          {
+            path: '/form/basic-form',
+            name: 'basic-form',
+            routes: [
+              {
+                path: '/form/basic-form/basic-one',
+                name: 'basic-one',
+                exact: false,
+                component: './Form/BasicForm/BasicOne',
+              },
+            ],
+          },
         ],
       },
       {

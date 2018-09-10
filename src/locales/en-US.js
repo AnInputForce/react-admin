@@ -5,6 +5,8 @@ export default {
   'menu.dashboard.analysis': 'Analysis',
   'menu.dashboard.workplace': 'Workplace',
   'menu.form': 'Form',
+  'menu.form.basic-form': 'Basic Form',
+  'menu.form.basic-form.basic-one': 'Basic One',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',

@@ -7,6 +7,8 @@ export default {
   'menu.dashboard.analysis': '分析页',
   'menu.dashboard.workplace': '工作台',
   'menu.form': '表单页',
+  'menu.form.basic-form': '基础表单',
+  'menu.form.basic-form.basic-one': '基础表单一',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'app.analysis.test': '工专路 {no} 号店',
