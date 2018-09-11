@@ -81,6 +81,12 @@ export default [
               },
             ],
           },
+          {
+            path: '/form/step-form',
+            name: 'step-form',
+            component: './Form/StepForm',
+            exact: false,
+          },
         ],
       },
       {

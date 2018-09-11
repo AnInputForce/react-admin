@@ -12,6 +12,7 @@ export default {
   'menu.form.column-form.single-column': 'Single Column',
   'menu.form.column-form.two-columns': 'Two Columns',
   'menu.form.column-form.three-columns': 'Three Columns',
+  'menu.form.step-form': 'Step Form',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',
