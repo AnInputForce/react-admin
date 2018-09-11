@@ -94,7 +94,7 @@ export function parseCascaderValues(options, values) {
       }
       return true;
     })
-    if(!exist) {
+    if (!exist) {
       return false;
     }
     return true;

@@ -34,7 +34,7 @@ class AdvancedFormOutput extends PureComponent {
       return '账号组二';
     }
   };
-  
+
   renderPaymentDetail = (respData) => {
     if (respData.paymentConditions === '2') {
       return (

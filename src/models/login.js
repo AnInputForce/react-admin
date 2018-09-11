@@ -52,35 +52,35 @@ export default {
       }
     },
     *logout(payload, { call, put }) {
-        let response = yield call(userLogout, payload);
-        if( typeof response === 'string' ) {
-            response = JSON.parse(response);
-        }
-        if (!isRespSucc(response)) {
-          showErrorMsg(response);
-          return;
-        }
-        yield put({
-          type: 'changeLoginStatus',
-          payload: {
-            code: undefined,
-            message: undefined,
-            data: {
-              currentAuthority: '',
-              token: undefined,
-            },
+      let response = yield call(userLogout, payload);
+      if (typeof response === 'string') {
+        response = JSON.parse(response);
+      }
+      if (!isRespSucc(response)) {
+        showErrorMsg(response);
+        return;
+      }
+      yield put({
+        type: 'changeLoginStatus',
+        payload: {
+          code: undefined,
+          message: undefined,
+          data: {
+            currentAuthority: '',
+            token: undefined,
           },
-        });
-        reloadAuthorized();
-        yield put(
-          routerRedux.push({
-            pathname: '/user/login',
-            search: stringify({
-              redirect: window.location.href,
-            }),
-          })
-        );
-      },
+        },
+      });
+      reloadAuthorized();
+      yield put(
+        routerRedux.push({
+          pathname: '/user/login',
+          search: stringify({
+            redirect: window.location.href,
+          }),
+        })
+      );
+    },
   },
 
   reducers: {

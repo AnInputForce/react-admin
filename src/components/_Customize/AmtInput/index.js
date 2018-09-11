@@ -49,7 +49,7 @@ class AmtInput extends React.PureComponent {
       required,
       decimal: propDecimal,
       max: propMax,
-      min: propMin
+      min: propMin,
     } = this.props;
     const decimal = propDecimal == null ? 2 : propDecimal;
     const max = propMax == null ? 100000000000 : propMax;

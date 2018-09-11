@@ -60,7 +60,7 @@ class LoginPage extends Component {
           </Tab>
           <div>
             <a style={{ float: 'right' }} href="">
-              忘记密码
+            忘记密码
             </a>
           </div>
           <Submit className={styles.submit} loading={submitting}>登录</Submit>
