@@ -38,7 +38,6 @@ class ThreeColumnsInput extends PureComponent {
     e.preventDefault();
     const { form, dispatch, routeid } = this.props;
     form.validateFields((err, values) => {
-      console.log('values:', values);
       if (err) return;
       const parseBirthday = parseMomentObject(values.birthday, 'MM-DD-YYYY');
       dispatch({
