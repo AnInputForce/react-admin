@@ -67,6 +67,12 @@ export default [
                 exact: false,
                 component: './Form/ColumnForm/SingleColumn',
               },
+              {
+                path: '/form/column-form/two-columns',
+                name: 'two-columns',
+                exact: false,
+                component: './Form/ColumnForm/TwoColumns',
+              },
             ],
           },
         ],

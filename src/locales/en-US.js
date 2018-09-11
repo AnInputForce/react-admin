@@ -10,6 +10,7 @@ export default {
   'menu.form.basic-form.basic-two': 'Basic Two',
   'menu.form.column-form': 'Column Form',
   'menu.form.column-form.single-column': 'Single Column',
+  'menu.form.column-form.two-columns': 'Two Columns',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',
