@@ -73,6 +73,12 @@ export default [
                 exact: false,
                 component: './Form/ColumnForm/TwoColumns',
               },
+              {
+                path: '/form/column-form/three-columns',
+                name: 'three-columns',
+                exact: false,
+                component: './Form/ColumnForm/ThreeColumns',
+              },
             ],
           },
         ],
