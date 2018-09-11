@@ -135,8 +135,8 @@ class Analysis extends Component {
       return '';
     }
     if (
-      rangePickerValue[0].isSame(value[0], 'day') &&
-      rangePickerValue[1].isSame(value[1], 'day')
+      rangePickerValue[0].isSame(value[0], 'day')
+      && rangePickerValue[1].isSame(value[1], 'day')
     ) {
       return styles.currentDate;
     }

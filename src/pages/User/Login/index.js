@@ -47,10 +47,10 @@ class LoginPage extends Component {
           }}
         >
           <Tab key="account" tab="账户密码登录">
-            { login.code !== 'OK' &&
-              login.type === 'account' &&
-              !login.submitting &&
-              this.renderMessage(`${login.message}`)}
+            { login.code !== 'OK'
+              && login.type === 'account'
+              && !login.submitting
+              && this.renderMessage(`${login.message}`)}
             <UserName name="userName" placeholder="admin / guest" />
             <Password
               name="password"

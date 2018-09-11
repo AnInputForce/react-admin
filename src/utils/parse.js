@@ -61,7 +61,8 @@ export function parseMomentObject(object, parseFormat) {
  * @param parseFormat: 指定的格式
  * @example parseDateTimeString('30-11-2017', 'DD-MM-YYYY', 'YYYY年MM月DD日')
  *          返回：2017年11月30日
- * @example parseDateTimeString('30-11-2017 23:50:39', 'DD-MM-YYYY HH:mm:ss', 'YYYY年MM月DD日 HH时mm分ss秒')
+ * @example parseDateTimeString('30-11-2017 23:50:39', 'DD-MM-YYYY HH:mm:ss',
+ *          'YYYY年MM月DD日 HH时mm分ss秒')
  *          返回：2017年11月30日 23时50分39秒
  * @return 转换后的日期时间字符串
  */
@@ -93,12 +94,12 @@ export function parseCascaderValues(options, values) {
         return false;
       }
       return true;
-    })
+    });
     if (!exist) {
       return false;
     }
     return true;
-  })
+  });
   return labels;
 }
 

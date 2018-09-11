@@ -30,7 +30,7 @@ const loginMock = {
   },
   'DELETE /api/logout/account': (_, res) => {
     res.json(packSuccRes());
-  }
-}
+  },
+};
 
 export default delay(loginMock, Math.random() * 3000);

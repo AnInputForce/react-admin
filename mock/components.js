@@ -1927,6 +1927,6 @@ const cityMock = {
   'GET /api/city': (_, res) => {
     res.json(packSuccRes(city, city.length));
   },
-}
+};
 
 export default delay(cityMock, Math.random() * 3000);

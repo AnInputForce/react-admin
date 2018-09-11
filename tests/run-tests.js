@@ -23,8 +23,8 @@ startServer.stdout.on('data', data => {
   // eslint-disable-next-line
   console.log(data.toString());
   if (
-    data.toString().indexOf('Compiled successfully') >= 0 ||
-    data.toString().indexOf('Compiled with warnings') >= 0
+    data.toString().indexOf('Compiled successfully') >= 0
+    || data.toString().indexOf('Compiled with warnings') >= 0
   ) {
     // eslint-disable-next-line
     console.log('Development server is started, ready to run tests.');

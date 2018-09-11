@@ -307,8 +307,8 @@ class AdvancedFormInput extends PureComponent {
                   rules: [
                     {
                       required:
-                        getFieldValue('paymentConditions') === '3' &&
-                        getFieldValue('cardType') === '1',
+                        getFieldValue('paymentConditions') === '3'
+                        && getFieldValue('cardType') === '1',
                       message: '请输入身份证号码',
                     },
                     {
@@ -320,8 +320,8 @@ class AdvancedFormInput extends PureComponent {
                   <Input
                     disabled={
                       !(
-                        getFieldValue('paymentConditions') === '3' &&
-                        getFieldValue('cardType') === '1'
+                        getFieldValue('paymentConditions') === '3'
+                        && getFieldValue('cardType') === '1'
                       )
                     }
                     placeholder="请输入身份证号码"
@@ -337,8 +337,8 @@ class AdvancedFormInput extends PureComponent {
                   rules: [
                     {
                       required:
-                        getFieldValue('paymentConditions') === '3' &&
-                        getFieldValue('cardType') === '2',
+                        getFieldValue('paymentConditions') === '3'
+                        && getFieldValue('cardType') === '2',
                       message: '请输入护照编号',
                     },
                   ],
@@ -346,8 +346,8 @@ class AdvancedFormInput extends PureComponent {
                   <Input
                     disabled={
                       !(
-                        getFieldValue('paymentConditions') === '3' &&
-                        getFieldValue('cardType') === '2'
+                        getFieldValue('paymentConditions') === '3'
+                        && getFieldValue('cardType') === '2'
                       )
                     }
                     placeholder="请输入护照编号"

@@ -77,5 +77,5 @@ const formMock = {
       accountName: '张三',
     }));
   },
-}
+};
 export default delay(formMock, Math.random() * 3000);
