@@ -9,11 +9,11 @@ import { getPropsValue, digitUppercase, thousandBitSeparator } from './utils';
 export function parseSexValue(value) {
   if (value === '1') {
     return '男';
-  } else if (value === '2') {
-    return '女';
-  } else {
-    return '';
   }
+  if (value === '2') {
+    return '女';
+  }
+  return '';
 }
 
 /**
@@ -49,9 +49,8 @@ export function parseValueByDicts(props, params, value) {
 export function parseMomentObject(object, parseFormat) {
   if (object == null) {
     return null;
-  } else {
-    return moment(object).format(parseFormat);
   }
+  return moment(object).format(parseFormat);
 }
 
 /**
@@ -69,9 +68,8 @@ export function parseMomentObject(object, parseFormat) {
 export function parseDateTimeString(value, valueFormat, parseFormat) {
   if (value == null || value === '') {
     return '';
-  } else {
-    return moment(value, valueFormat).format(parseFormat);
   }
+  return moment(value, valueFormat).format(parseFormat);
 }
 
 /**
@@ -111,7 +109,6 @@ export function parseCascaderValues(options, values) {
 export function parseAmtUppercase(value) {
   if (value == null || value === '') {
     return undefined;
-  } else {
-    return `${thousandBitSeparator(value)} (${digitUppercase(value)})`;
   }
+  return `${thousandBitSeparator(value)} (${digitUppercase(value)})`;
 }

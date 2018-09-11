@@ -110,13 +110,12 @@ class City extends React.PureComponent {
     const formItemLayout = getFormItemLayout(columnLayout, columnIndex);
     if (columnLayout === 1) {
       return <div>{this.createFormItem(formItemLayout)}</div>;
-    } else {
-      return (
-        <div>
-          <Col {...formItemLayout}>{this.createFormItem({})}</Col>
-        </div>
-      );
     }
+    return (
+      <div>
+        <Col {...formItemLayout}>{this.createFormItem({})}</Col>
+      </div>
+    );
   };
 
   render() {

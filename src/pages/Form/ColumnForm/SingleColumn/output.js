@@ -67,22 +67,21 @@ class SingleColumnOutput extends PureComponent {
           actions={actions}
         />
       );
-    } else {
-      const extra = createErrExtra(response);
-      const actions = (
-        <div>
-          <Button
-            type="primary"
-            onClick={() => {
-              dispatch({ type: 'single-column/back2edit' });
-            }}
-          >
-            返回修改
-          </Button>
-        </div>
-      );
-      return <Result type="error" title="提交失败" extra={extra} actions={actions} />;
     }
+    const extra = createErrExtra(response);
+    const actions = (
+      <div>
+        <Button
+          type="primary"
+          onClick={() => {
+            dispatch({ type: 'single-column/back2edit' });
+          }}
+        >
+            返回修改
+        </Button>
+      </div>
+    );
+    return <Result type="error" title="提交失败" extra={extra} actions={actions} />;
   }
 }
 

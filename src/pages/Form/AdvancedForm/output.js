@@ -12,9 +12,11 @@ class AdvancedFormOutput extends PureComponent {
   parsePaymentConditions = paymentConditions => {
     if (paymentConditions === '1') {
       return '1-密码支付';
-    } else if (paymentConditions === '2') {
+    }
+    if (paymentConditions === '2') {
       return '2-手机支付';
-    } else if (paymentConditions === '3') {
+    }
+    if (paymentConditions === '3') {
       return '3-证件支付';
     }
   };
@@ -22,17 +24,15 @@ class AdvancedFormOutput extends PureComponent {
   parseCardType = cardType => {
     if (cardType === '1') {
       return '1-身份证';
-    } else {
-      return '2-护照';
     }
+    return '2-护照';
   };
 
   parseAccountType = accountType => {
     if (accountType === '1') {
       return '账号组一';
-    } else {
-      return '账号组二';
     }
+    return '账号组二';
   };
 
   renderPaymentDetail = (respData) => {
@@ -40,7 +40,8 @@ class AdvancedFormOutput extends PureComponent {
       return (
         <Description term="手机号码">{respData.phone}</Description>
       );
-    } else if (respData.paymentConditions === '3') {
+    }
+    if (respData.paymentConditions === '3') {
       return (
         <div>
           <Description term="证件类型">{this.parseCardType(respData.cardType)}</Description>
@@ -51,9 +52,8 @@ class AdvancedFormOutput extends PureComponent {
           )}
         </div>
       );
-    } else {
-      return null;
     }
+    return null;
   }
 
   render() {
@@ -113,22 +113,21 @@ class AdvancedFormOutput extends PureComponent {
           actions={actions}
         />
       );
-    } else {
-      const extra = createErrExtra(response);
-      const actions = (
-        <div>
-          <Button
-            type="primary"
-            onClick={() => {
-              dispatch({ type: 'advanced-form/back2edit' });
-            }}
-          >
-            返回修改
-          </Button>
-        </div>
-      );
-      return <Result type="error" title="提交失败" extra={extra} actions={actions} />;
     }
+    const extra = createErrExtra(response);
+    const actions = (
+      <div>
+        <Button
+          type="primary"
+          onClick={() => {
+            dispatch({ type: 'advanced-form/back2edit' });
+          }}
+        >
+            返回修改
+        </Button>
+      </div>
+    );
+    return <Result type="error" title="提交失败" extra={extra} actions={actions} />;
   }
 }
 

@@ -161,14 +161,13 @@ class DoublePwd extends React.PureComponent {
           {this.createConfirmPwdFormItem(min, max, width, confirmFormItemLayout)}
         </div>
       );
-    } else {
-      return (
-        <div>
-          <Col {...pwdFormItemLayout}>{this.createPwdFormItem(min, max, width, {})}</Col>
-          <Col {...confirmFormItemLayout}>{this.createConfirmPwdFormItem(min, max, width, {})}</Col>
-        </div>
-      );
     }
+    return (
+      <div>
+        <Col {...pwdFormItemLayout}>{this.createPwdFormItem(min, max, width, {})}</Col>
+        <Col {...confirmFormItemLayout}>{this.createConfirmPwdFormItem(min, max, width, {})}</Col>
+      </div>
+    );
   };
 
   render() {

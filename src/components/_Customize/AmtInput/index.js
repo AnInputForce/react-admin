@@ -70,11 +70,10 @@ class AmtInput extends React.PureComponent {
         this.setState({ help, validateStatus: 'error' });
         callback(help);
         return;
-      } else {
-        this.setState({ help: '', validateStatus: '' });
-        callback();
-        return;
       }
+      this.setState({ help: '', validateStatus: '' });
+      callback();
+      return;
     }
 
     // 数字合法性规则校验
@@ -181,13 +180,12 @@ class AmtInput extends React.PureComponent {
     const formItemLayout = getFormItemLayout(columnLayout, columnIndex);
     if (columnLayout === 1) {
       return <div>{this.createFormItem(formItemLayout)}</div>;
-    } else {
-      return (
-        <div>
-          <Col {...formItemLayout}>{this.createFormItem({})}</Col>
-        </div>
-      );
     }
+    return (
+      <div>
+        <Col {...formItemLayout}>{this.createFormItem({})}</Col>
+      </div>
+    );
   };
 
   render() {
