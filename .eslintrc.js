@@ -24,6 +24,7 @@ module.exports = {
     'linebreak-style': 0,
     'no-else-return': 0,
     'import/no-unresolved': 0,
+    'consistent-return': 0,
   },
   settings: {
     polyfills: ['fetch', 'promises', 'url'],

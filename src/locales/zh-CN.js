@@ -15,6 +15,7 @@ export default {
   'menu.form.column-form.two-columns': '两列表单',
   'menu.form.column-form.three-columns': '三列表单',
   'menu.form.step-form': '分步表单',
+  'menu.form.advanced-form': '高级表单',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'app.analysis.test': '工专路 {no} 号店',

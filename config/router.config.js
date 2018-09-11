@@ -87,6 +87,12 @@ export default [
             component: './Form/StepForm',
             exact: false,
           },
+          {
+            path: '/form/advanced-form',
+            name: 'advanced-form',
+            component: './Form/AdvancedForm',
+            exact: false,
+          },
         ],
       },
       {
