@@ -49,6 +49,12 @@ export default [
                 exact: false,
                 component: './Form/BasicForm/BasicOne',
               },
+              {
+                path: '/form/basic-form/basic-two',
+                name: 'basic-two',
+                exact: false,
+                component: './Form/BasicForm/BasicTwo',
+              },
             ],
           },
         ],

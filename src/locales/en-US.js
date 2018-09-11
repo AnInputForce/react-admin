@@ -7,6 +7,7 @@ export default {
   'menu.form': 'Form',
   'menu.form.basic-form': 'Basic Form',
   'menu.form.basic-form.basic-one': 'Basic One',
+  'menu.form.basic-form.basic-two': 'Basic Two',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',
