@@ -10,6 +10,8 @@ export default {
   'menu.form.basic-form': '基础表单',
   'menu.form.basic-form.basic-one': '基础表单一',
   'menu.form.basic-form.basic-two': '基础表单二',
+  'menu.form.column-form': '分列表单',
+  'menu.form.column-form.single-column': '单列表单',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'app.analysis.test': '工专路 {no} 号店',

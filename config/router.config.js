@@ -57,6 +57,18 @@ export default [
               },
             ],
           },
+          {
+            path: '/form/column-form',
+            name: 'column-form',
+            routes: [
+              {
+                path: '/form/column-form/single-column',
+                name: 'single-column',
+                exact: false,
+                component: './Form/ColumnForm/SingleColumn',
+              },
+            ],
+          },
         ],
       },
       {
