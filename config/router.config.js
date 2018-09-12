@@ -96,6 +96,20 @@ export default [
         ],
       },
       {
+        path: '/list',
+        name: 'list',
+        icon: 'table',
+        authority: ['admin'],
+        routes: [
+          {
+            path: 'list/standard-table',
+            name: 'standard-table',
+            component: './List/StandardTable',
+            exact: false,
+          },
+        ],
+      },
+      {
         name: 'exception',
         path: '/exception',
         hideInMenu: true,
