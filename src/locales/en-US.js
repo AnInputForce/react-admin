@@ -17,6 +17,7 @@ export default {
   'menu.list': 'list',
   'menu.list.standard-table': 'Standard Table',
   'menu.list.standard-list': 'Standard List',
+  'menu.list.edit-table': 'Edit Table',
   'menu.list.card-list': 'Card List',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',

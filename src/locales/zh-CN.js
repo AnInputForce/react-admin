@@ -18,6 +18,7 @@ export default {
   'menu.form.advanced-form': '高级表单',
   'menu.list': '列表页',
   'menu.list.standard-table': '标准表格',
+  'menu.list.edit-table': '编辑表格',
   'menu.list.standard-list': '标准列表',
   'menu.list.card-list': '卡片列表',
   'menu.account.center': '个人中心',

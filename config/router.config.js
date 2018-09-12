@@ -108,6 +108,12 @@ export default [
             exact: false,
           },
           {
+            path: 'list/edit-table',
+            name: 'edit-table',
+            component: './List/EditTable',
+            exact: false,
+          },
+          {
             path: 'list/standard-list',
             name: 'standard-list',
             component: './List/StandardList',
