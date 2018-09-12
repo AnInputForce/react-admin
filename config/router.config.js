@@ -13,6 +13,7 @@ export default [
     path: '/',
     component: '../layouts/BasicLayout',
     Routes: ['src/pages/Authorized'],
+    authority: ['admin', 'guest'],
     routes: [
       // dashboard
       { path: '/', redirect: '/dashboard/analysis' },

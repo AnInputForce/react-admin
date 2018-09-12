@@ -30,6 +30,7 @@ export default {
   'menu.comp.detail-comp': '组件详情',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
+  'menu.account.logout': '退出登录',
   'app.analysis.test': '工专路 {no} 号店',
   'app.analysis.introduce': '指标说明',
   'app.analysis.total-sales': '总销售额',

@@ -28,6 +28,7 @@ export default {
   'menu.comp.detail-comp': 'Detail Component',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
+  'menu.account.logout': 'Logout',
   'app.analysis.test': 'Gongzhuan No.{no} shop',
   'app.analysis.introduce': 'Introduce',
   'app.analysis.total-sales': 'Total Sales',
