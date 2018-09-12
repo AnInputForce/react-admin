@@ -18,6 +18,7 @@ export default {
   'menu.form.advanced-form': '高级表单',
   'menu.list': '列表页',
   'menu.list.standard-table': '标准表格',
+  'menu.list.standard-list': '标准列表',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'app.analysis.test': '工专路 {no} 号店',

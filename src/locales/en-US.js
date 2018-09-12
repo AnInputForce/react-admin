@@ -16,6 +16,7 @@ export default {
   'menu.form.advanced-form': 'Advanced Form',
   'menu.list': 'list',
   'menu.list.standard-table': 'Standard Table',
+  'menu.list.standard-list': 'Standard List',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',

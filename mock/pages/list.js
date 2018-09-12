@@ -1,6 +1,8 @@
 import { delay } from 'roadhog-api-doc';
 import { parse } from 'url';
 import standardTable from '../datas/standard-table';
+import standardList from '../datas/standard-list';
+import standardListHeader from '../datas/standard-list-header';
 import { packSuccRes, packErrorRes } from '../utils';
 
 const listMock = {
@@ -83,6 +85,42 @@ const listMock = {
     } else {
       res.json(packSuccRes(dataSource[0]));
     }
+  },
+  'GET /api/standardList/header': (_, res) => {
+    res.json(packSuccRes(...standardListHeader));
+  },
+  'GET /api/standardList': (req, res, u) => {
+    let url = u;
+
+    if (!url || Object.prototype.toString.call(url) !== '[object String]') {
+      url = req.url; // eslint-disable-line
+    }
+    const params = parse(url, true).query;
+    let dataSource = [...standardList];
+
+    if (params.type) {
+      dataSource = dataSource.filter(data => data.type === parseInt(params.type, 10));
+    }
+
+    if (params.highPriority) {
+      dataSource = dataSource.filter(
+        data => data.highPriority === parseInt(params.highPriority, 10)
+      );
+    }
+
+    if (params.approvalNo) {
+      dataSource = dataSource.filter(data => data.approvalNo.indexOf(params.approvalNo) > -1);
+    }
+
+    let pageSize = 5;
+    if (params.pageSize) {
+      pageSize = params.pageSize * 1;
+    }
+
+    const current = parseInt(params.current, 10) || 1;
+    const newDataSource = dataSource.slice((current - 1) * pageSize, current * pageSize);
+
+    res.json(packSuccRes({ total: dataSource.length, dataSource: newDataSource }));
   },
 };
 export default delay(listMock, Math.random() * 3000);

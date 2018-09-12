@@ -107,6 +107,12 @@ export default [
             component: './List/StandardTable',
             exact: false,
           },
+          {
+            path: 'list/standard-list',
+            name: 'standard-list',
+            component: './List/StandardList',
+            exact: false,
+          },
         ],
       },
       {

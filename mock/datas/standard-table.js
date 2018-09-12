@@ -1,4 +1,4 @@
-const standardTableDataSource = [
+const standardTable = [
   {
     id: 1,
     userid: 'aaa111',
@@ -502,4 +502,4 @@ const standardTableDataSource = [
   },
 ];
 
-export default standardTableDataSource;
+export default standardTable;
