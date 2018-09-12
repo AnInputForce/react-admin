@@ -139,6 +139,12 @@ export default [
             component: 'Profile/BasicProfile',
             exact: false,
           },
+          {
+            path: '/profile/advanced-profile',
+            name: 'advanced-profile',
+            component: './Profile/AdvancedProfile',
+            exact: false,
+          },
         ],
       },
       {
