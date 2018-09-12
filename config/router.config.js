@@ -113,6 +113,12 @@ export default [
             component: './List/StandardList',
             exact: false,
           },
+          {
+            path: 'list/card-list',
+            name: 'card-list',
+            component: './List/CardList',
+            exact: false,
+          },
         ],
       },
       {
