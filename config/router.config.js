@@ -148,6 +148,25 @@ export default [
         ],
       },
       {
+        path: '/comp',
+        name: 'comp',
+        icon: 'appstore-o',
+        authority: ['admin', 'guest'],
+        routes: [
+          {
+            path: '/comp/basic-comp',
+            name: 'basic-comp',
+            component: 'Comp/BasicComp',
+          },
+          {
+            path: '/comp/detail-comp',
+            name: 'detail-comp',
+            component: 'Comp/DetailComp',
+            hideInMenu: true,
+          },
+        ],
+      },
+      {
         name: 'exception',
         path: '/exception',
         hideInMenu: true,
