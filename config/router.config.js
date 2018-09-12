@@ -102,25 +102,25 @@ export default [
         authority: ['admin'],
         routes: [
           {
-            path: 'list/standard-table',
+            path: '/list/standard-table',
             name: 'standard-table',
             component: './List/StandardTable',
             exact: false,
           },
           {
-            path: 'list/edit-table',
+            path: '/list/edit-table',
             name: 'edit-table',
             component: './List/EditTable',
             exact: false,
           },
           {
-            path: 'list/standard-list',
+            path: '/list/standard-list',
             name: 'standard-list',
             component: './List/StandardList',
             exact: false,
           },
           {
-            path: 'list/card-list',
+            path: '/list/card-list',
             name: 'card-list',
             component: './List/CardList',
             exact: false,
