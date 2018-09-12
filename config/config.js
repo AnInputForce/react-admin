@@ -19,7 +19,8 @@ export default {
         locale: {
           enable: true, // default false
           default: 'zh-CN', // default zh-CN
-          baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
+          baseNavigator: true, // default true, when it is true,
+          // will use `navigator.language` overwrite default
         },
         dynamicImport: {
           loadingComponent: './components/PageLoading/index',
@@ -27,12 +28,12 @@ export default {
         polyfills: ['ie11'],
         ...(!process.env.TEST && os.platform() === 'darwin'
           ? {
-              dll: {
-                include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
-                exclude: ['@babel/runtime'],
-              },
-              hardSource: true,
-            }
+            dll: {
+              include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
+              exclude: ['@babel/runtime'],
+            },
+            hardSource: true,
+          }
           : {}),
       },
     ],
@@ -58,9 +59,9 @@ export default {
     modules: true,
     getLocalIdent: (context, localIdentName, localName) => {
       if (
-        context.resourcePath.includes('node_modules') ||
-        context.resourcePath.includes('ant.design.pro.less') ||
-        context.resourcePath.includes('global.less')
+        context.resourcePath.includes('node_modules')
+        || context.resourcePath.includes('ant.design.pro.less')
+        || context.resourcePath.includes('global.less')
       ) {
         return localName;
       }
@@ -101,8 +102,8 @@ export default {
         libraryDirectory: 'lib',
         style: true,
         camel2DashComponentName: false,
-      }
-    ]
+      },
+    ],
   ],
   alias: {
     'react-admin-components': path.resolve(__dirname, '../src/components/_Customize'),
