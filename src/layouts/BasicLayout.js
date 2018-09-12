@@ -11,7 +11,7 @@ import { enquireScreen, unenquireScreen } from 'enquire-js';
 import { formatMessage } from 'umi/locale';
 import SiderMenu from '@/components/SiderMenu';
 import Authorized from '@/utils/Authorized';
-// import SettingDrawer from '@/components/SettingDrawer';
+import SettingDrawer from '@/components/SettingDrawer';
 import logo from '../assets/logo.svg';
 import Footer from './Footer';
 import Header from './Header';
@@ -203,6 +203,16 @@ class BasicLayout extends React.PureComponent {
     });
   };
 
+  renderSettingDrawer() {
+    // Do show SettingDrawer in production
+    // unless deployed in preview.pro.ant.design as demo
+    const { rendering } = this.state;
+    if ((rendering || process.env.NODE_ENV === 'production') && APP_TYPE !== 'site') {
+      return null;
+    }
+    return <SettingDrawer />;
+  }
+
   render() {
     const {
       navTheme,
@@ -211,7 +221,7 @@ class BasicLayout extends React.PureComponent {
       location: { pathname },
     } = this.props;
     // eslint-disable-next-line
-    const { rendering, isMobile } = this.state;
+    const { isMobile } = this.state;
     const isTop = PropsLayout === 'topmenu';
     const menuData = this.getMenuData();
     const layout = (
@@ -258,10 +268,7 @@ class BasicLayout extends React.PureComponent {
         </DocumentTitle>
         {
           /*
-          (rendering || process.env.NODE_ENV === 'production') ? null : (
-            // Do show SettingDrawer in production
-            <SettingDrawer />
-          )
+          {this.renderSettingDrawer()}
           */
         }
       </React.Fragment>
