@@ -24,6 +24,7 @@ export default {
   'menu.profile.advanced-profile': 'Advanced Profile',
   'menu.comp': 'Component',
   'menu.comp.basic-comp': 'Basic Component',
+  'menu.comp.extend-comp': 'Extend Component',
   'menu.comp.detail-comp': 'Detail Component',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',

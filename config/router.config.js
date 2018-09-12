@@ -159,6 +159,11 @@ export default [
             component: 'Comp/BasicComp',
           },
           {
+            path: '/comp/extend-comp',
+            name: 'extend-comp',
+            component: 'Comp/ExtendComp',
+          },
+          {
             path: '/comp/detail-comp',
             name: 'detail-comp',
             component: 'Comp/DetailComp',

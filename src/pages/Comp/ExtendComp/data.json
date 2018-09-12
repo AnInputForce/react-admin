@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "title": "City",
+    "version": "v 1.0.0",
+    "name": "城市选择组件",
+    "description": "功能：调用REST接口获取城市信息并提供展示选择功能。",
+    "whenUse": "需要进行城市级联选择时使用。",
+    "rest": "/api/city",
+    "rules": ["1. 设置必输时必须输入。"],
+    "props": [
+      {
+        "key": 1,
+        "name": "form",
+        "desc": "当前form表单",
+        "type": "Form",
+        "required": "true",
+        "default": "-"
+      },
+      {
+        "key": 2,
+        "name": "label",
+        "desc": "标签的文本",
+        "type": "String",
+        "required": "true",
+        "default": "-"
+      },
+      {
+        "key": 3,
+        "name": "field",
+        "desc": "绑定的数据元素",
+        "type": "string",
+        "required": "true",
+        "default": "-"
+      },
+      {
+        "key": 4,
+        "name": "initialValue",
+        "desc": "节点的初始值",
+        "type": "object",
+        "required": "true",
+        "default": "-"
+      },
+      {
+        "key": 5,
+        "name": "columnLayout",
+        "desc": "布局列数",
+        "type": "number",
+        "required": "false",
+        "default": "1"
+      },
+      {
+        "key": 6,
+        "name": "columnIndex",
+        "desc": "摆放的列序号",
+        "type": "number",
+        "required": "false",
+        "default": "0"
+      },
+      {
+        "key": 7,
+        "name": "colon",
+        "desc": "是否显示 label 后面的冒号",
+        "type": "boolean",
+        "required": "false",
+        "default": "true"
+      },
+      {
+        "key": 8,
+        "name": "hasFeedback",
+        "desc": "展示校验状态图标",
+        "type": "boolean",
+        "required": "false",
+        "default": "false"
+      },
+      {
+        "key": 9,
+        "name": "required",
+        "desc": "是否必填",
+        "type": "boolean",
+        "required": "false",
+        "default": "false"
+      },
+      {
+        "key": 10,
+        "name": "disabled",
+        "desc": "是否禁用状态",
+        "type": "boolean",
+        "required": "false",
+        "default": "false"
+      },
+      {
+        "key": 11,
+        "name": "placeholder",
+        "desc": "提示信息",
+        "type": "boolean",
+        "required": "false",
+        "default": "根据参数自动生成"
+      },
+      {
+        "key": 12,
+        "name": "width",
+        "desc": "宽度",
+        "type": "string",
+        "required": "false",
+        "default": "100%"
+      },
+      {
+        "key": 13,
+        "name": "onGetCityValues",
+        "desc": "获取城市信息回调函数",
+        "type": "function",
+        "required": "false",
+        "default": "-"
+      }
+    ]
+  }
+]

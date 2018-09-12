@@ -26,6 +26,7 @@ export default {
   'menu.profile.advanced-profile': '高级详情页',
   'menu.comp': '组件页',
   'menu.comp.basic-comp': '基础组件',
+  'menu.comp.extend-comp': '扩展组件',
   'menu.comp.detail-comp': '组件详情',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
