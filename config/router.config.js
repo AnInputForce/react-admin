@@ -128,6 +128,20 @@ export default [
         ],
       },
       {
+        path: '/profile',
+        name: 'profile',
+        icon: 'profile',
+        authority: ['admin'],
+        routes: [
+          {
+            path: 'profile/basic-profile',
+            name: 'basic-profile',
+            component: 'Profile/BasicProfile',
+            exact: false,
+          },
+        ],
+      },
+      {
         name: 'exception',
         path: '/exception',
         hideInMenu: true,

@@ -21,6 +21,8 @@ export default {
   'menu.list.edit-table': '编辑表格',
   'menu.list.standard-list': '标准列表',
   'menu.list.card-list': '卡片列表',
+  'menu.profile': '详情页',
+  'menu.profile.basic-profile': '基础详情页',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'app.analysis.test': '工专路 {no} 号店',

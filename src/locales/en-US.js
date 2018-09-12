@@ -19,6 +19,8 @@ export default {
   'menu.list.standard-list': 'Standard List',
   'menu.list.edit-table': 'Edit Table',
   'menu.list.card-list': 'Card List',
+  'menu.profile': 'profile',
+  'menu.profile.basic-profile': 'Basic Profile',
   'menu.account.center': 'Account Center',
   'menu.account.settings': 'Account Settings',
   'app.analysis.test': 'Gongzhuan No.{no} shop',
