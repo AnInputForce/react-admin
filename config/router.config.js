@@ -134,9 +134,9 @@ export default [
         authority: ['admin'],
         routes: [
           {
-            path: 'profile/basic-profile',
+            path: '/profile/basic-profile',
             name: 'basic-profile',
-            component: 'Profile/BasicProfile',
+            component: './Profile/BasicProfile',
             exact: false,
           },
           {
