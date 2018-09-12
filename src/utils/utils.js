@@ -179,6 +179,16 @@ export function formatWan(val) {
   return result;
 }
 
+export function isJsonString(str) {
+  try {
+    if (typeof JSON.parse(str) === 'object') {
+      return true;
+    }
+  } catch (e) {
+    return false;
+  }
+  return false;
+}
 // add by liaowei at 20180907
 
 export function isCallSucc(response) {
