@@ -31,6 +31,7 @@ module.exports = {
     'generator-star-spacing': 0,
     'arrow-parens': 0,
     'no-mixed-operators': 0,
+    'operator-linebreak': 0,
     'comma-dangle': [
       'error',
       {
