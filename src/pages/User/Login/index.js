@@ -47,11 +47,11 @@ class LoginPage extends Component {
           }}
         >
           <Tab key="account" tab="账户密码登录">
-            { login.code !== 'OK'
-              && login.type === 'account'
-              && !login.submitting
-              && this.renderMessage(`${login.message}`)}
-            <UserName name="userName" placeholder="admin / guest" />
+            {login.code !== 'OK' &&
+              login.type === 'account' &&
+              !login.submitting &&
+              this.renderMessage(`${login.message}`)}
+            <UserName name="userName" placeholder="admin / user" />
             <Password
               name="password"
               placeholder="123456 / 654321"
@@ -60,10 +60,12 @@ class LoginPage extends Component {
           </Tab>
           <div>
             <a style={{ float: 'right' }} href="">
-            忘记密码
+              忘记密码
             </a>
           </div>
-          <Submit className={styles.submit} loading={submitting}>登录</Submit>
+          <Submit className={styles.submit} loading={submitting}>
+            登录
+          </Submit>
         </Login>
       </div>
     );

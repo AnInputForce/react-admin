@@ -12,9 +12,9 @@ const loginMock = {
         type,
         token: Date.now(),
       };
-    } else if (userName === 'guest' && password === '654321') {
+    } else if (userName === 'user' && password === '654321') {
       data = {
-        currentAuthority: 'guest',
+        currentAuthority: 'user',
         userName,
         type,
         token: Date.now(),

@@ -44,7 +44,7 @@ export default {
             ...response,
             data: {
               type: payload.type,
-              currentAuthority: '',
+              currentAuthority: 'guest',
               token: undefined,
             },
           },
@@ -66,7 +66,7 @@ export default {
           code: undefined,
           message: undefined,
           data: {
-            currentAuthority: '',
+            currentAuthority: 'guest',
             token: undefined,
           },
         },
