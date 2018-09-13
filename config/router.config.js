@@ -13,7 +13,7 @@ export default [
     path: '/',
     component: '../layouts/BasicLayout',
     Routes: ['src/pages/Authorized'],
-    authority: ['admin', 'guest'],
+    authority: ['admin', 'user'],
     routes: [
       // dashboard
       { path: '/', redirect: '/dashboard/analysis' },
@@ -152,7 +152,6 @@ export default [
         path: '/comp',
         name: 'comp',
         icon: 'appstore-o',
-        authority: ['admin', 'guest'],
         routes: [
           {
             path: '/comp/basic-comp',
